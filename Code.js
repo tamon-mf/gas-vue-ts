@@ -18,7 +18,21 @@ function onOpen(e) {
       .addItem('Show sidebar', 'showSidebar')
       .addItem('Show dialog', 'showDialog')
       .addToUi();
+  SpreadsheetApp.getUi()
+    .createMenu('MoneyForward')
+    .addItem('Start', 'setupSideBar')
+    .addToUi();
 }
+
+function setupSideBar() {
+  const ui = SpreadsheetApp.getUi();
+  const html = HtmlService
+    .createTemplateFromFile('index')
+    .evaluate().setSandboxMode(HtmlService.SandboxMode.IFRAME);
+  html.setTitle(' ');
+  ui.showSidebar(html);
+}
+
 
 /**
  * Runs when the add-on is installed; calls onOpen() to ensure menu creation and
