@@ -5,11 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && cp appsscript.json dist/appsscript.json",
-    "build:watch": "vite build --watch && cp appsscript.json dist/appsscript.json && cp Code.js dist/Code.js",
-    "build:server": "esbuild server/main.ts --outfile=dist/main.js",
-    "deploy:watch": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push --watch",
     "preview": "vite preview",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build && cp appsscript.json dist/appsscript.json",
+    "build:server": "esbuild server/main.ts --outfile=dist/server/main.js",
     "push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push"
   },
   "devDependencies": {
