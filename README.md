@@ -7,8 +7,11 @@
 
 ## Todos
 
-- [ ] Setup build, watch options
-- [ ] Biome setup
+- [x] Setup GAS onOpen
+- [x] Setup build, watch options
+- [x] Biome setup
+- [ ] Biome auto format
 - [ ] Setup env var file
 - [ ] Husky, Lint-staged
-- [ ] 
+- [ ] script when cloning repo
+  - [ ] copy appscript.json once

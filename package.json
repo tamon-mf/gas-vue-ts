@@ -5,15 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\" \"npm run push:watch\"",
     "preview": "vite preview",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "vite build && cp appsscript.json dist/appsscript.json",
+    "build:client": "vite build",
     "build:server": "esbuild server/main.ts --outfile=dist/server/main.js",
-    "push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push"
+    "build": "npm run build:client && npm run build:server",
+    "build:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\"",
+    "push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push",
+    "push:watch": "chokidar \"dist/**\" -c \"NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push\" --initial"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.3.8",
     "@types/google-apps-script": "^2.0.8",
     "@vitejs/plugin-vue2": "^2.3.4",
+    "chokidar-cli": "^3.0.0",
+    "concurrently": "^9.2.1",
     "esbuild": "^0.27.0",
     "typescript": "~5.9.3",
     "vite": "^7.2.4",

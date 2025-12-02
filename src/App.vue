@@ -3,7 +3,7 @@
 
 <template>
   <v-container>
-    <v-btn color="primary" large>Vuetify 2 Button a</v-btn>
+    <v-btn color="primary" large>Vuetify 2 Button</v-btn>
   </v-container>
 </template>
 

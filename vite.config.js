@@ -20,5 +20,7 @@ export default defineConfig({
         main: path.resolve(__dirname, 'src/index.html'),
       },
     },
+    outDir: 'dist',
+    emptyOutDir: false,
   },
 });
