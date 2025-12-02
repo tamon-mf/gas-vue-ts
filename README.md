@@ -11,6 +11,7 @@
 - [x] Setup build, watch options
 - [x] Biome setup
 - [ ] Biome auto format
+- [ ] Develop one user story
 - [ ] Setup env var file
 - [ ] Husky, Lint-staged
 - [ ] script when cloning repo

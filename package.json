@@ -1,35 +1,35 @@
 {
-  "name": "gas-test",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "dev:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\" \"npm run push:watch\"",
-    "preview": "vite preview",
-    "build:client": "vite build",
-    "build:server": "esbuild server/main.ts --outfile=dist/server/main.js",
-    "build": "npm run build:client && npm run build:server",
-    "build:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\"",
-    "push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push",
-    "push:watch": "chokidar \"dist/**\" -c \"NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push\" --initial"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.3.8",
-    "@types/google-apps-script": "^2.0.8",
-    "@vitejs/plugin-vue2": "^2.3.4",
-    "chokidar-cli": "^3.0.0",
-    "concurrently": "^9.2.1",
-    "esbuild": "^0.27.0",
-    "typescript": "~5.9.3",
-    "vite": "^7.2.4",
-    "vite-plugin-dts": "^4.5.4",
-    "vite-plugin-singlefile": "^2.3.0",
-    "vue-template-compiler": "2.6.14"
-  },
-  "dependencies": {
-    "path": "^0.12.7",
-    "vue": "2.7.16",
-    "vuetify": "2.7.2"
-  }
+	"name": "gas-test",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"dev:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\" \"npm run push:watch\"",
+		"preview": "vite preview",
+		"build:client": "vite build",
+		"build:server": "esbuild server/main.ts --outfile=dist/server/main.js",
+		"build": "npm run build:client && npm run build:server",
+		"build:watch": "concurrently \"vite build --watch\" \"esbuild server/main.ts --outfile=dist/server/main.js --watch\"",
+		"push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push",
+		"push:watch": "chokidar \"dist/**\" -c \"NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push\" --initial"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.8",
+		"@types/google-apps-script": "^2.0.8",
+		"@vitejs/plugin-vue2": "^2.3.4",
+		"chokidar-cli": "^3.0.0",
+		"concurrently": "^9.2.1",
+		"esbuild": "^0.27.0",
+		"typescript": "~5.9.3",
+		"vite": "^7.2.4",
+		"vite-plugin-dts": "^4.5.4",
+		"vite-plugin-singlefile": "^2.3.0",
+		"vue-template-compiler": "2.6.14"
+	},
+	"dependencies": {
+		"path": "^0.12.7",
+		"vue": "2.7.16",
+		"vuetify": "2.7.2"
+	}
 }
