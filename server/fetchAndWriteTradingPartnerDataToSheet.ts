@@ -1,5 +1,5 @@
-function fetchAndWriteTradingPartnerDataToSheet() {
-	return "Mock Server Response";
-}
+import mockModule from "./modules/mockModule";
 
-export default fetchAndWriteTradingPartnerDataToSheet;
+export function fetchAndWriteTradingPartnerDataToSheet() {
+	mockModule();
+}

@@ -11,8 +11,9 @@
 - [x] Setup build, watch options
 - [x] Biome setup
   - [x] Biome auto format by saving file
-- [ ] Develop one user story w/ gas server
-  - [ ] confirm bundling behavior of server
+- [x] Develop one user story w/ gas server
+  - [x] confirm bundling behavior of server
+- [ ] Setup gasnuki for type safe interface
 - [ ] Setup env var file
 - [ ] Husky, Lint-staged
 - [ ] set running script when cloning repo

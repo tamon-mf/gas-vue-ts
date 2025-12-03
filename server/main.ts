@@ -1,5 +1,5 @@
 // Learn more about extending Sheets with Editor add-ons at https://developers.google.com/workspace/add-ons/editors/sheets
-import fetchAndWriteTradingPartnerDataToSheet from "./fetchAndWriteTradingPartnerDataToSheet";
+// import fetchAndWriteTradingPartnerDataToSheet from "./fetchAndWriteTradingPartnerDataToSheet";
 
 export function setupSideBar() {
 	const ui = SpreadsheetApp.getUi();
@@ -22,4 +22,4 @@ export function onInstall() {
 }
 
 // Export all functions to expose to the client
-export { fetchAndWriteTradingPartnerDataToSheet };
+export * from "./fetchAndWriteTradingPartnerDataToSheet";
