@@ -10,9 +10,12 @@
 - [x] Setup GAS onOpen
 - [x] Setup build, watch options
 - [x] Biome setup
-- [ ] Biome auto format
-- [ ] Develop one user story
+  - [x] Biome auto format by saving file
+- [ ] Develop one user story w/ gas server
+  - [ ] confirm bundling behavior of server
 - [ ] Setup env var file
 - [ ] Husky, Lint-staged
-- [ ] script when cloning repo
+- [ ] set running script when cloning repo
   - [ ] copy appscript.json once
+  - [ ] setup husky
+- [ ] check https://github.com/mahaker/openapi-generator-gas

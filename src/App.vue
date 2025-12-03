@@ -1,16 +1,15 @@
 <template>
   <v-container>
-    <Header />
+    <Top />
     <!-- <v-btn color="primary" large>Vuetify 2 Button</v-btn> -->
   </v-container>
 </template>
 
 <script lang="ts">
-import Header from "./components/Header.vue";
-
+import Top from "./pages/Top.vue";
 export default {
 	components: {
-		Header,
+		Top,
 	},
 };
 </script>
