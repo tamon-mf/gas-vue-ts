@@ -1,7 +1,7 @@
 <template id="button-component">
-  <button class="main-button box-border-important" :class="'align-' + align" :disabled="disabled" @click="handleClick">
+  <v-button class="main-button box-border-important" :class="'align-' + align" :disabled="disabled" @click="handleClick">
     <slot></slot>
-  </button>
+  </v-button>
 </template>
 
 <script lang="ts">

@@ -9,8 +9,8 @@
 		"preview": "vite preview",
 		"build:client": "vite build",
 		"build:client:watch": "vite build --watch",
-		"build:server": "tsx server/build.ts",
-		"build:server:watch": "WATCH=true tsx server/build.ts",
+		"build:server": "tsx scripts/build.ts",
+		"build:server:watch": "WATCH=true tsx scripts/build.ts",
 		"build": "npm run build:client && npm run build:server",
 		"build:watch": "concurrently \"npm run build:client:watch\" \"npm run build:server:watch\"",
 		"push": "NODE_TLS_REJECT_UNAUTHORIZED=0 clasp push",
@@ -24,6 +24,7 @@
 		"chokidar-cli": "^3.0.0",
 		"concurrently": "^9.2.1",
 		"esbuild": "^0.27.0",
+		"path": "^0.12.7",
 		"tsx": "^4.21.0",
 		"typescript": "~5.9.3",
 		"vite": "^7.2.4",
@@ -32,7 +33,6 @@
 		"vue-template-compiler": "2.6.14"
 	},
 	"dependencies": {
-		"path": "^0.12.7",
 		"vue": "2.7.16",
 		"vuetify": "2.7.2"
 	}

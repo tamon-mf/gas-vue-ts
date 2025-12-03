@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      path:
-        specifier: ^0.12.7
-        version: 0.12.7
       vue:
         specifier: 2.7.16
         version: 2.7.16
@@ -39,6 +36,9 @@ importers:
       esbuild:
         specifier: ^0.27.0
         version: 0.27.0
+      path:
+        specifier: ^0.12.7
+        version: 0.12.7
       tsx:
         specifier: ^4.21.0
         version: 4.21.0

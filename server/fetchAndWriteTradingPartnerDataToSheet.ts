@@ -1,6 +1,5 @@
 function fetchAndWriteTradingPartnerDataToSheet() {
-	console.log("fetchAndWriteTradingPartnerDataToSheet");
-	return "mockFunction";
+	return "Mock Server Response";
 }
 
 export default fetchAndWriteTradingPartnerDataToSheet;

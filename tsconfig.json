@@ -21,5 +21,11 @@
 		"noFallthroughCasesInSwitch": true,
 		"noUncheckedSideEffectImports": true
 	},
-	"include": ["src", "src/types/shims-vue.d.ts", "server", "server/global.d.ts"]
+	"include": [
+		"src",
+		"src/types/shims-vue.d.ts",
+		"server",
+		"server/global.d.ts",
+		"scripts/**/*.ts"
+	]
 }

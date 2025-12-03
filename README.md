@@ -19,3 +19,4 @@
   - [ ] copy appscript.json once
   - [ ] setup husky
 - [ ] check https://github.com/mahaker/openapi-generator-gas
+- [ ] Setup vitest

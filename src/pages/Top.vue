@@ -8,8 +8,9 @@
 </template>
 
 
-<script>
+<script lang="ts">
 import MainButton from "../components/MainButton.vue";
+import TprReportService from "../services/tprReportService";
 
 export default {
 	components: {
@@ -17,7 +18,22 @@ export default {
 	},
 	methods: {
 		async handleGetData() {
-			await TprReportService.fetchAndWriteTradingPartnerDataToSheet(params);
+			const params = {
+				monthlyDate: "2025-01-01",
+				journalId: 1,
+				approvalStatuses: ["approved", "rejected"],
+				departmentIds: [1, 2, 3],
+				projectId: 1,
+				counterpartyId: 1,
+			};
+
+			const result =
+				await TprReportService.fetchAndWriteTradingPartnerDataToSheet(params);
+			if (result) {
+				alert("マスター連携が成功しました");
+			} else {
+				alert("マスター連携が失敗しました");
+			}
 		},
 	},
 };
