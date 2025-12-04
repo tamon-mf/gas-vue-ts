@@ -1,5 +1,5 @@
 {
-	"name": "gas-test",
+	"name": "gas-vue-ts",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -40,5 +40,8 @@
 	"dependencies": {
 		"vue": "2.7.16",
 		"vuetify": "2.7.2"
+	},
+	"engines": {
+		"node": ">=20.0.0"
 	}
 }

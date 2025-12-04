@@ -1,3 +1,5 @@
+// Note: In case rolldown is not working correctly because of its beta status, we can use this script to build the server code.
+
 import { build, context } from "esbuild";
 import ts from "typescript";
 
