@@ -21,3 +21,5 @@
   - [ ] setup husky
 - [ ] check https://github.com/mahaker/openapi-generator-gas
 - [ ] Setup vitest
+- [ ] Prod build error handling
+  - [ ] https://github.com/luthpg/vite-plugin-google-apps-script

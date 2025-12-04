@@ -21,5 +21,5 @@ export function onInstall() {
 	onOpen();
 }
 
-// Export all functions to expose to the client
-export * from "./fetchAndWriteTradingPartnerDataToSheet";
+// !Important: Export all functions to expose to the client
+export * from "./serverFunction";

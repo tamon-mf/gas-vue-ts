@@ -9,8 +9,8 @@
 
 
 <script lang="ts">
+import { serverFunction } from "../../server/serverFunction";
 import MainButton from "../components/MainButton.vue";
-import TprReportService from "../services/tprReportService";
 
 export default {
 	components: {
@@ -27,8 +27,8 @@ export default {
 				counterpartyId: 1,
 			};
 
-			const result =
-				await TprReportService.fetchAndWriteTradingPartnerDataToSheet(params);
+			const result = await serverFunction(params);
+			console.log(result);
 			if (result) {
 				alert("マスター連携が成功しました");
 			} else {
