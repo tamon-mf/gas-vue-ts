@@ -97,7 +97,7 @@ This starts a Vite dev server at `http://localhost:5173` for local testing.
   - `vite-plugin-singlefile` - Bundles the entire app into a single HTML file (required for GAS)
 - **Rolldown 1.0.0-beta.52** - Fast Rust-based bundler for server-side code
   - `rolldown-plugin-remove-export` - Removes export statements from server code
-- **esbuild ^0.27.0** - Fast JavaScript bundler (used in legacy build script)
+- **esbuild ^0.27.0** - Fast JavaScript bundler (used in backup build script)
 
 ### Development Tools
 - **@biomejs/biome 2.3.8** - Fast formatter and linter
@@ -181,15 +181,7 @@ gas-test/
 
 ## TODOs
 
-### Completed ✅
-- [x] Setup GAS onOpen
-- [x] Setup build, watch options
-- [x] Biome setup
-  - [x] Biome auto format by saving file
-- [x] Develop one user story w/ gas server
-  - [x] confirm bundling behavior of server
-
-### In Progress / Planned 📋
+### In Progress / Planned
 - [ ] Investigate feasibility of fetching data in client-side using GAS
 - [ ] Setup [gasnuki](https://github.com/luthpg/gasnuki) for type safe interface
 - [ ] Setup Husky, Lint-staged
