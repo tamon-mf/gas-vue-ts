@@ -8,7 +8,6 @@ A Google Apps Script (GAS) project with a Vue.js frontend, built with TypeScript
 
 - Node.js (v20 or higher recommended)
 - pnpm (package manager)
-- Google Apps Script CLI (`clasp`) - install globally with `npm install -g @google/clasp`
 - A Google Apps Script project (create one at [script.google.com](https://script.google.com))
 
 ### Initial Setup
