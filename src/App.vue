@@ -1,7 +1,9 @@
 <template>
-  <v-container>
-    <Top />
-  </v-container>
+	<div class="v-application v-application--is-ltr theme--light">
+		<v-container fluid>
+			<Top/>
+		</v-container>
+	</div>
 </template>
 
 <script lang="ts">
@@ -13,7 +15,5 @@ export default {
 };
 </script>
 
-
 <style scoped>
-
 </style>

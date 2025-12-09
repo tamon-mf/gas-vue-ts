@@ -1,44 +1,63 @@
 <template>
-<div class="box">
-  <div class="title66 main-text-color font-bold">マスター連携</div>
-  <main-button icon="document" @click="handleGetData">
-    マスター
-		</main-button>
-</div>
+	<div class="box">
+		<div class="title66 main-text-color font-bold">マスター連携</div>
+		<v-btn
+			@click="handleGetData"
+			:disabled="isLoading"
+			:loading="isLoading"
+			color="primary"
+		>
+			マスター
+		</v-btn>
+		<v-simple-table v-if="data.length > 0">
+			<template v-slot:default>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="item in data" :key="item.id">
+						<td>{{ item.id }}</td>
+						<td>{{ item.name }}</td>
+					</tr>
+				</tbody>
+			</template>
+		</v-simple-table>
+	</div>
 </template>
 
-
 <script lang="ts">
-import { serverFunction } from "../../server/serverFunction";
-import MainButton from "../components/MainButton.vue";
+import type { Device } from "../../server/modules/mockModule";
+import GoogleScriptUtils from "../utils/googleScriptUtils";
 
 export default {
-	components: {
-		MainButton,
+	components: {},
+	data() {
+		return {
+			isLoading: false,
+			data: [] as Device[],
+		};
 	},
 	methods: {
 		async handleGetData() {
-			const params = {
-				monthlyDate: "2025-01-01",
-				journalId: 1,
-				approvalStatuses: ["approved", "rejected"],
-				departmentIds: [1, 2, 3],
-				projectId: 1,
-				counterpartyId: 1,
-			};
+			try {
+				this.isLoading = true;
 
-			const result = await serverFunction(params);
-			console.log(result);
-			if (result) {
-				alert("マスター連携が成功しました");
-			} else {
-				alert("マスター連携が失敗しました");
+				const data =
+					await GoogleScriptUtils.runAsync<Device[]>("serverFunction");
+				console.log("API Response:", data);
+				this.data = data;
+			} catch (error: unknown) {
+				console.error("Error fetching data:", error);
+			} finally {
+				this.isLoading = false;
 			}
 		},
 	},
 };
 </script>
-
 
 <style scoped>
 </style>

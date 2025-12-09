@@ -14,6 +14,17 @@ export default defineConfig({
 			},
 		],
 	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				// Add global SASS variables, mixins, etc. if needed
+				// additionalData: `@import "@/styles/variables.scss";`,
+			},
+			sass: {
+				// SASS-specific options
+			},
+		},
+	},
 	build: {
 		rollupOptions: {
 			input: {
