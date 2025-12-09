@@ -183,14 +183,14 @@ gas-test/
 ### In Progress / Planned
 - [x] Investigate feasibility of fetching data in client-side using GAS
   - It's impossible because of CORS.
-- [ ] Setup [gasnuki](https://github.com/luthpg/gasnuki) for type safe interface
 - [ ] Setup Husky, Lint-staged
 - [ ] Set running script when cloning repo
   - [ ] copy appscript.json once
   - [ ] init husky
-- [ ] Investigate [openapi code generator](https://github.com/mahaker/openapi-generator-gas)
 - [ ] Setup vitest
 - [ ] Setup Validation library such as VeeValidate
+- [ ] Investigate [openapi code generator](https://github.com/mahaker/openapi-generator-gas)
+- [ ] Setup [gasnuki](https://github.com/luthpg/gasnuki) for type safe interface
 - [ ] Prod build error handling using [vite-plugin](https://github.com/luthpg/vite-plugin-google-apps-script) if needed
 
 ## Additional Notes

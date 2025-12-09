@@ -1,6 +1,7 @@
 <template>
-	<div class="v-application v-application--is-ltr theme--light">
-		<v-container fluid>
+	<!-- Note: <v-app> is not used because it is not compatible with Google Apps Script. -->
+	<div class="v-application v-application--is-ltr theme--light h-100">
+		<v-container>
 			<Top/>
 		</v-container>
 	</div>
@@ -16,4 +17,7 @@ export default {
 </script>
 
 <style scoped>
+.h-100 {
+	height: 100vh;
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="box">
+	<div class="d-flex flex-column align-center ga-2">
 		<div class="title66 main-text-color font-bold">マスター連携</div>
 		<v-btn
 			@click="handleGetData"
@@ -60,4 +60,7 @@ export default {
 </script>
 
 <style scoped>
+.ga-2 {
+	gap: 8px;
+}
 </style>
