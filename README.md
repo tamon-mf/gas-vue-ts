@@ -187,6 +187,7 @@ gas-test/
 - [ ] Set running script when cloning repo
   - [ ] copy appscript.json once
   - [ ] init husky
+- [ ] Create types dir to store interfaces between client and server
 - [ ] Setup vitest
 - [ ] Setup Validation library such as VeeValidate
 - [ ] Investigate [openapi code generator](https://github.com/mahaker/openapi-generator-gas)
